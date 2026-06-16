@@ -67,7 +67,7 @@ implementation 'com.pcloud.sdk:java-core:1.9.1'
 
 In addition to the functionality provided by the `java-core` module, Android applications can benefit from platform-specific features.
 The `android` module provides a built-in authorization Activity that handles the application authorization requests.
-For details on usage, refer to the  [AuthorizationActivity](https://pcloud.github.io/pcloud-sdk-java/com/pcloud/sdk/AuthorizationActivity.html) documentation.
+For details on usage, refer to the  [AuthorizationActivity](https://pcloud.github.io/pcloud-sdk-java/android/com.pcloud.sdk/-authorization-activity/index.html) documentation.
 
 
 Grab via Maven:
@@ -100,7 +100,7 @@ ApiClient apiClient = PCloudSdk.newClientBuilder()
 - `ApiClient` instances should be reused as much as possible. Avoid creating multiple instances.
 - Existing `ApiClient` instances can be re-configured by calling `ApiClient.newBuilder()` and creating a new instance.
 - Existing `ApiClient` instances can be 'killed' by calling `ApiClient.shutdown()`.
-- For details on the available configuration options, see [here](https://pcloud.github.io/pcloud-sdk-java/com/pcloud/sdk/ApiClient.Builder.html)
+- For details on the available configuration options, see [here](https://pcloud.github.io/pcloud-sdk-java/java-core/com.pcloud.sdk/-api-client/-builder/index.html)
 
 ---
 ### Making API calls
@@ -111,7 +111,7 @@ ApiClient apiClient = PCloudSdk.newClientBuilder()
 Call<RemoteFolder> call = apiClient.listFolder(RemoteFolder.ROOT_FOLDER_ID);
 ```
   - Creating `Call` instances does not by itself make any API request, treat the objects as a declaration of intent. See the following sections for more information on how to execute calls.
-  - For a full list of available API calls, see [here](https://pcloud.github.io/pcloud-sdk-java/com/pcloud/sdk/ApiClient.html).
+  - For a full list of available API calls, see [here](https://pcloud.github.io/pcloud-sdk-java/java-core/com.pcloud.sdk/-api-client/index.html).
 
 #### Executing a `Call` and obtaining the result on the same thread:
 ```java
@@ -280,7 +280,7 @@ remoteFile.download(new DataSink() {
 ### Java
 
 See the code in the `sample` module or the sample application [here](https://github.com/pCloud/pcloud-sdk-java/blob/master/sample/src/main/java/Main.java). The sample explains briefly:
-- [ApiClient](https://pcloud.github.io/pcloud-sdk-java/com/pcloud/sdk/ApiClient.html) instantiation and configuration.
+- [ApiClient](https://pcloud.github.io/pcloud-sdk-java/java-core/com.pcloud.sdk/-api-client/index.html) instantiation and configuration.
 - File tree browsing and listing folder contents.
 - Copy/move/delete/rename operations on files and folders.
 - File uploads.
@@ -291,7 +291,7 @@ See the code in the `sample` module or the sample application [here](https://git
 
 - See the code in the `sample-android` module or the sample application [here](https://github.com/pCloud/pcloud-sdk-java/blob/master/sample-android/src/main/java/com/pcloud/sdk/sample/MainActivity.java).
 - The sample contains an application allowing users to request authorization for a registered pCloud API application.
-- The sample gives a hint on how [AuthorizationActivity](https://pcloud.github.io/pcloud-sdk-java/com/pcloud/sdk/AuthorizationActivity.html) should be used.
+- The sample gives a hint on how [AuthorizationActivity](https://pcloud.github.io/pcloud-sdk-java/android/com.pcloud.sdk/-authorization-activity/index.html) should be used.
 
 #License
 	Licensed under the Apache License, Version 2.0 (the "License");
